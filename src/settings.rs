@@ -16,7 +16,7 @@ use crate::level::Level;
 
 // ---
 
-static DEFAULT_SETTINGS_RAW: &str = include_str!("../etc/defaults/config.yaml");
+static DEFAULT_SETTINGS_RAW: &str = include_str!("../etc/defaults/config.toml");
 static DEFAULT_SETTINGS: Lazy<Settings> = Lazy::new(|| Settings::load(Source::Str("", FileFormat::Yaml)).unwrap());
 
 // ---
@@ -34,7 +34,7 @@ pub struct Settings {
 
 impl Settings {
     pub fn load(source: Source) -> Result<Self, Error> {
-        let builder = Config::builder().add_source(File::from_str(DEFAULT_SETTINGS_RAW, FileFormat::Yaml));
+        let builder = Config::builder().add_source(File::from_str(DEFAULT_SETTINGS_RAW, FileFormat::Toml));
         let builder = match source {
             Source::File(SourceFile { filename, required }) => {
                 builder.add_source(File::with_name(filename).required(required))

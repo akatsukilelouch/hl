@@ -1,0 +1,60 @@
+"$schema" = "https://raw.githubusercontent.com/pamburus/hl/master/schema/json/theme.schema.json"
+
+[elements.input]
+foreground = "bright-black"
+
+[elements.time]
+foreground = "bright-black"
+
+[elements.logger]
+foreground = "bright-black"
+
+[elements.caller]
+foreground = "bright-black"
+
+[elements.level]
+foreground = "default"
+
+[elements.message]
+foreground = "bright-white"
+
+[elements.field]
+foreground = "bright-black"
+
+[elements.key]
+foreground = "green"
+
+[elements.ellipsis]
+foreground = "bright-black"
+
+[elements.object]
+foreground = "default"
+
+[elements.array]
+foreground = "default"
+
+[elements.string]
+foreground = "default"
+
+[elements.number]
+foreground = "cyan"
+
+[elements.boolean]
+foreground = "yellow"
+
+[elements.null]
+foreground = "yellow"
+
+[levels.debug.level-inner]
+foreground = "magenta"
+
+[levels.info.level-inner]
+foreground = "cyan"
+
+[levels.warning.level]
+foreground = "bright-yellow"
+modes = ["reverse"]
+
+[levels.error.level]
+foreground = "bright-red"
+modes = ["reverse"]
